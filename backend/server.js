@@ -41,6 +41,7 @@ app.use(mongoSanitize());
 app.use(xss());
 
 const url = `mongodb+srv://${username}:${pass}${myCluster}.mongodb.net/project?retryWrites=true&w=majority`;
+// const url = `mongodb+srv://:hp13hp13@gurujii.vvw2f.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 mongoose.connect(url, {
   useNewUrlParser: true,
   useCreateIndex: true,

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import './style.css';
 
 import { getregisteredUserData } from '../store/reducer/user';
 
@@ -31,13 +32,13 @@ class Login extends Component {
     return (
       <div>
         <GoogleLogin
+          className='google-login'
           clientId={clientId}
           buttonText='Signin with Google'
           theme='dark'
           onSuccess={this.onSuccess}
           onFailure={this.onFailure}
           cookiePolicy={'single_host_origin'}
-          style={{ marginTop: '100px' }}
           isSignedIn={true}
         />
       </div>

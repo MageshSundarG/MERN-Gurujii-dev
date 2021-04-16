@@ -10,7 +10,8 @@ import {
 } from 'bootstrap-4-react';
 
 import { connect } from 'react-redux';
-import Login from './login';
+import Signin from './signin';
+import Signup from './signup';
 import Logout from './logout';
 import Form1 from './form';
 import Update from './update';
@@ -227,9 +228,51 @@ class navbar extends Component {
                     <Nav.Link disabled>Disabled</Nav.Link>
                   </Nav.Item>
                 </Navbar.Nav>
-                <Login />
+                <Button
+                  primary
+                  mr='sm-4'
+                  data-toggle='modal'
+                  data-target='#Modal3'
+                >
+                  Sign In
+                </Button>
+                <Button
+                  light
+                  outline
+                  mr='sm-4'
+                  data-toggle='modal'
+                  data-target='#Modal4'
+                >
+                  Sign Up
+                </Button>
               </Collapse>
             </Navbar>
+            <Modal id='Modal3' fade>
+              <Modal.Dialog centered>
+                <Modal.Content className='modal-signin'>
+                  <Modal.Header>
+                    <Modal.Title>Sign In</Modal.Title>
+                    <Modal.Close>
+                      <span aria-hidden='true'>&times;</span>
+                    </Modal.Close>
+                  </Modal.Header>
+                  <Signin />
+                </Modal.Content>
+              </Modal.Dialog>
+            </Modal>
+            <Modal id='Modal4' fade>
+              <Modal.Dialog centered>
+                <Modal.Content className='modal-signup'>
+                  <Modal.Header>
+                    <Modal.Title>Sign Up</Modal.Title>
+                    <Modal.Close>
+                      <span aria-hidden='true'>&times;</span>
+                    </Modal.Close>
+                  </Modal.Header>
+                  <Signup />
+                </Modal.Content>
+              </Modal.Dialog>
+            </Modal>
           </div>
         )}
 

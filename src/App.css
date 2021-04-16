@@ -3,6 +3,18 @@ html {
   height: 100%;
 }
 
+.modal-signin{
+  position: absolute !important;
+  width: 500px !important;
+  margin-left: 0px !important;
+}
+
+.modal-signup{
+  position: absolute !important;
+  width: 500px !important;
+  margin-left: 0px !important;
+}
+
 .parallax {
   /* The image used */
   background-image: url('./img.jpg');
